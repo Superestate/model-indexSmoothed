@@ -118,7 +118,7 @@ for (i in sa4_NSW$sa4){
   assign(paste0('df_index_smoothed_',i),data.frame(sa4=eval(i),property_type_id=1,smoothed_indexVal=eval(as.name(paste0('index_smoothed_',i))),phase=eval(as.name(paste0('index_',i)))$phase[1:length(eval(as.name(paste0('index_smoothed_',i))))]))
   
   
-  #dbWriteTable(con, "sa4_index_smoothed", eval(as.name(paste0('df_index_smoothed_',i))), append = TRUE)
+  dbWriteTable(con, "sa4_index_smoothed", eval(as.name(paste0('df_index_smoothed_',i))), append = TRUE)
   
 }
 
@@ -203,6 +203,6 @@ for (i in sa4_NSW$sa4){
   assign(paste0('df_index_smoothed_',i),data.frame(sa4=eval(i),property_type_id=2,smoothed_indexVal=eval(as.name(paste0('index_smoothed_',i))),phase=eval(as.name(paste0('index_',i)))$phase[1:length(eval(as.name(paste0('index_smoothed_',i))))]))
   
   
-  #dbWriteTable(con, "sa4_index_smoothed", eval(as.name(paste0('df_index_smoothed_',i))), append = TRUE)
+  dbWriteTable(con, "sa4_index_smoothed", eval(as.name(paste0('df_index_smoothed_',i))), append = TRUE)
   
 }
